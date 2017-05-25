@@ -62,7 +62,34 @@ public class WebPage {
         WebElement elementToWaitFor = new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(element));
         new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.invisibilityOf(elementToWaitFor));
     }
-    
+    	
+	/**
+	 * 
+	 * @param selector
+	 * @param value
+	 * @return
+	 */
+	protected Boolean validateMaxSelectorValue(WebElement selector, int selectedValue){
+		
+		int maxValue = 0;
+		int currentValue = 0;
+		
+		new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(selector));
+		
+		for(WebElement option: selector.findElements(By.tagName("option"))){
+			currentValue = Integer.parseInt(option.getText());
+			if(maxValue < currentValue ){
+				maxValue = currentValue; 
+			}
+		}
+		System.out.println(selectedValue + "<=" + maxValue);
+		if(selectedValue <= maxValue){
+			return true;
+		}
+		
+		return false;
+	}
+	   
     /**
      * Selects the indicated dates on the indicated datepickers
      * @param datePickers

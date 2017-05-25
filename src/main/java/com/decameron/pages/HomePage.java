@@ -2,6 +2,7 @@ package com.decameron.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -42,8 +43,11 @@ public class HomePage extends WebPage{
 		super(driver);
 	}
 	
-	public void fillBooking(String departureCity, String arrivalHotel, String arrivalDate, String departureDate, 
-			int adultsNumber){
+	public Boolean validateMaxAdultsSelector(int adultsNumber){
+		return validateMaxSelectorValue(selectorAdults, adultsNumber);
+	}
+	
+	public void fillArrivalAndDepartureBooking(String departureCity, String arrivalHotel, String arrivalDate, String departureDate){
 		
 		tabHotel.click();
 		setInputValue(inputDepartureCity, departureCity);
@@ -55,10 +59,10 @@ public class HomePage extends WebPage{
 		arrivalDatePicker.click();
 		selectDatePickers(new DatePicker(arrivalDatePicker, arrivalDate));
 		departureDatePicker.click();
-		selectDatePickers(new DatePicker(departureDatePicker, departureDate));
+		selectDatePickers(new DatePicker(departureDatePicker, departureDate));		
 		
-		selectorAdults.click();// Pendiente
-		submitButton.click();
+		//selectorAdults.click();// Pendiente		
+		//submitButton.click();
 	}
 
 }
