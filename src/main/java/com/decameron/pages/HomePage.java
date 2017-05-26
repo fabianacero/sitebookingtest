@@ -61,8 +61,16 @@ public class HomePage extends WebPage{
 		departureDatePicker.click();
 		selectDatePickers(new DatePicker(departureDatePicker, departureDate));		
 		
-		//selectorAdults.click();// Pendiente		
+	}
+	
+	public void fillOccupationBooking(int adultsNumber){
+		
+		selectorAdults.click();
 		//submitButton.click();
+	}
+	
+	public void findRoomAccomodation(){
+		
 	}
 
 }

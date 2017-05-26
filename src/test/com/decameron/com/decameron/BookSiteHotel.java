@@ -26,6 +26,7 @@ public class BookSiteHotel {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 		homePage.fillArrivalAndDepartureBooking(depatureCity, arrivalHotel, arrivalDate, departureDate);
 		Assert.assertTrue(homePage.validateMaxAdultsSelector(adultsNumber), MSG_ADULT_NUMBER_ERR);
+		homePage.fillOccupationBooking(adultsNumber);
 		
 		try {
 			Thread.sleep(30000);
