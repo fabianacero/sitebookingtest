@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 import com.decameron.utility.DatePicker;
 
@@ -63,10 +64,13 @@ public class HomePage extends WebPage{
 		
 	}
 	
-	public void fillOccupationBooking(int adultsNumber){
+	public QuotePage fillOccupationBooking(int adultsNumber){
 		
+		//setSelectValue(selectorAdults, adultsNumber);
 		selectorAdults.click();
-		//submitButton.click();
+		selectListElement(selectorAdults.findElements(By.tagName("option")), "" + adultsNumber);
+		submitButton.click();
+		return PageFactory.initElements(driver, QuotePage.class);
 	}
 	
 	public void findRoomAccomodation(){

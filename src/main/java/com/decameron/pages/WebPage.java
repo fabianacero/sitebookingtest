@@ -3,11 +3,13 @@ package com.decameron.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.decameron.utility.*;
 
@@ -54,6 +56,17 @@ public class WebPage {
 		
 	}
 	
+	/**
+	 * Selects a normal selector with the indicated value
+	 * @param selector
+	 * @param adultsNumber
+	 */
+	public void setSelectValue(WebElement selector, int adultsNumber){
+		new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(selector));
+		//selector.click();
+		(new Select(selector)).deselectByValue("3");
+	}
+	
     /**
      * Waits until an indicated element exists
      * @param element
@@ -62,7 +75,21 @@ public class WebPage {
         WebElement elementToWaitFor = new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(element));
         new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.invisibilityOf(elementToWaitFor));
     }
-    	
+    
+    /**
+     * Waits until the loader element is invisible
+     * @param loaderDiv
+     */
+    public void waitUntilLoaderFinish(WebElement loaderDiv){
+		//new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(loaderDiv));
+		new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.invisibilityOf(loaderDiv));
+    }
+    
+    public void scrollTo(String x, String y){
+    	JavascriptExecutor jsx = (JavascriptExecutor)driver;
+    	jsx.executeScript("window.scrollBy(" + x + "," + y + ")", "");
+    }
+    
 	/**
 	 * 
 	 * @param selector
@@ -82,7 +109,7 @@ public class WebPage {
 				maxValue = currentValue; 
 			}
 		}
-		System.out.println(selectedValue + "<=" + maxValue);
+		
 		if(selectedValue <= maxValue){
 			return true;
 		}

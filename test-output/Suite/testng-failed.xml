@@ -5,7 +5,7 @@
     <parameter name="departure-city" value="Bogota"/>
     <parameter name="arrival-date" value="05/06/2017"/>
     <parameter name="departure-date" value="09/06/2017"/>
-    <parameter name="adults-number" value="5"/>
+    <parameter name="adults-number" value="3"/>
     <parameter name="arrival-hotel" value="Miss Mary"/>
     <classes>
       <class name="com.decameron.BookSiteHotel">

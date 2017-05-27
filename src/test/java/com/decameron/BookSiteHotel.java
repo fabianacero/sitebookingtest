@@ -3,6 +3,7 @@ package com.decameron;
 import org.testng.annotations.Test;
 
 import com.decameron.pages.HomePage;
+import com.decameron.pages.QuotePage;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -26,14 +27,8 @@ public class BookSiteHotel {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 		homePage.fillArrivalAndDepartureBooking(depatureCity, arrivalHotel, arrivalDate, departureDate);
 		Assert.assertTrue(homePage.validateMaxAdultsSelector(adultsNumber), MSG_ADULT_NUMBER_ERR);
-		homePage.fillOccupationBooking(adultsNumber);
-		
-		try {
-			Thread.sleep(30000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		QuotePage quotePage = homePage.fillOccupationBooking(adultsNumber);
+		quotePage.validateHotelQuote();
 	}
 	
 	@BeforeTest
