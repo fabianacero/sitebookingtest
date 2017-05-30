@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="55969" started-at="2017-05-27T22:50:46Z" finished-at="2017-05-27T22:51:42Z">
+  <suite name="Suite" duration-ms="67423" started-at="2017-05-30T19:52:28Z" finished-at="2017-05-30T19:53:35Z">
     <groups>
     </groups>
-    <test name="TestSiteColombia" duration-ms="55969" started-at="2017-05-27T22:50:46Z" finished-at="2017-05-27T22:51:42Z">
+    <test name="TestSiteColombia" duration-ms="67423" started-at="2017-05-30T19:52:28Z" finished-at="2017-05-30T19:53:35Z">
       <class name="com.decameron.BookSiteHotel">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.decameron.BookSiteHotel@3e6fa38a]" name="beforeTest" is-config="true" duration-ms="15166" started-at="2017-05-27T17:50:46Z" finished-at="2017-05-27T17:51:01Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="beforeTest" is-config="true" duration-ms="7926" started-at="2017-05-30T14:52:28Z" finished-at="2017-05-30T14:52:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="bookAHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)[pri:0, instance:com.decameron.BookSiteHotel@3e6fa38a]" name="bookAHotel" duration-ms="40613" started-at="2017-05-27T17:51:01Z" finished-at="2017-05-27T17:51:42Z">
+        <test-method status="PASS" signature="bookAHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="bookAHotel" duration-ms="58518" started-at="2017-05-30T14:52:36Z" finished-at="2017-05-30T14:53:34Z">
           <params>
             <param index="0">
               <value>
@@ -38,11 +38,26 @@
                 <![CDATA[3]]>
               </value>
             </param>
+            <param index="5">
+              <value>
+                <![CDATA[Automation]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Lastname]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookAHotel -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.decameron.BookSiteHotel@3e6fa38a]" name="afterTest" is-config="true" duration-ms="158" started-at="2017-05-27T17:51:42Z" finished-at="2017-05-27T17:51:42Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="afterTest" is-config="true" duration-ms="957" started-at="2017-05-30T14:53:34Z" finished-at="2017-05-30T14:53:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

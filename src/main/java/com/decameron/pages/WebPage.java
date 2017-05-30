@@ -68,7 +68,7 @@ public class WebPage {
 	}
 	
     /**
-     * Waits until an indicated element exists
+     * Waits until an indicated by element exists
      * @param element
      */
     public void waitElement(By element){
@@ -77,12 +77,23 @@ public class WebPage {
     }
     
     /**
+     * Waits until an indicated web element exists 
+     * @param element
+     */
+    public void waitElement(WebElement element){
+    	new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.visibilityOf(element));
+    }
+    
+    /**
      * Waits until the loader element is invisible
      * @param loaderDiv
      */
     public void waitUntilLoaderFinish(WebElement loaderDiv){
-		//new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(loaderDiv));
-		new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.invisibilityOf(loaderDiv));
+    	driver.switchTo().defaultContent();
+    	if(loaderDiv.isDisplayed()){    		
+    		//new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(loaderDiv));
+    		new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.invisibilityOf(loaderDiv));
+    	}
     }
     
     public void scrollTo(String x, String y){
