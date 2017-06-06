@@ -88,7 +88,7 @@ public class DatePicker {
 	}
 
 	/**
-     * Sets all date values based on the matches format DD-MM-YYYY
+     * Sets all date values based on the matches format DD/MM/YYYY
      * @param date
      * @return String Array
      */

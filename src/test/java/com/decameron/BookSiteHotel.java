@@ -19,22 +19,32 @@ public class BookSiteHotel {
 	private WebDriver driver;
 	private static final String URL = "https://www.decameron.com/es/co-inicio";
 	private static final String MSG_ADULT_NUMBER_ERR = "This is an incorrect adult number";
-	private static final String MSG_NO_QUOTE = "There's not any hotel quote";
+	private static final String MSG_NO_QUOTE = "Validate quote dates";
+	private static final String MSG_NO_HOTEL = "There isn't any hotel quote";
 	
 	@Test
 	@Parameters({"departure-city", "arrival-hotel", "arrival-date", "departure-date", "adults-number",
-		"first-passengers-name", "first-passengers-middlename", "first-passengers-lastname"})
+		"first-passengers-name", "first-passengers-middlename", "first-passengers-lastname",
+		"first-passengers-country","first-passengers-city","first-passengers-phone",
+		"first-passengers-id-type", "first-passengers-id", "first-passengers-birth-date", "first-passengers-genre",
+		"first-passengers-email"})
 	public void bookAHotel(String depatureCity, String arrivalHotel, String arrivalDate, String departureDate, 
-			int adultsNumber, String firtPassengersName, String firstPassengersMiddleName, String firstPassengersLastName) {
+			int adultsNumber, String firtPassengersName, String firstPassengersMiddleName, String firstPassengersLastName,
+			String firstPassengersCountry, String firstPassengersCity, String firstPassengersPhone,
+			String firstPassengersIDType, String firstPassengersID, String firstPassengersBirthDate, String firstPassengersGenre,
+			String firstPassengersEmail) {
 		
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 		homePage.fillArrivalAndDepartureBooking(depatureCity, arrivalHotel, arrivalDate, departureDate);
 		Assert.assertTrue(homePage.validateMaxAdultsSelector(adultsNumber), MSG_ADULT_NUMBER_ERR);
 		
 		QuotePage quotePage = homePage.fillOccupationBooking(adultsNumber);
-		Assert.assertTrue(quotePage.validateHotelQuote(), MSG_NO_QUOTE);
+		Assert.assertFalse(quotePage.validateNoQuote(), MSG_NO_QUOTE);
+		Assert.assertTrue(quotePage.validateHotelQuote(), MSG_NO_HOTEL);
 		SecurePage securePage = quotePage.selectARoom();
-		securePage.fillSecureForm(firtPassengersName, firstPassengersMiddleName, firstPassengersLastName);
+		securePage.fillSecureForm(firtPassengersName, firstPassengersMiddleName, firstPassengersLastName,
+				firstPassengersCountry, firstPassengersCity, firstPassengersPhone, firstPassengersIDType,
+				firstPassengersID, firstPassengersBirthDate, firstPassengersGenre, firstPassengersEmail);
 		
 		try {
 			Thread.sleep(10000);

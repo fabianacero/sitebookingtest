@@ -2,11 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="TestSiteColombia(failed)">
+    <parameter name="first-passengers-name" value="Automation"/>
+    <parameter name="first-passengers-lastname" value="Lastname"/>
+    <parameter name="first-passengers-country" value="COLOMBIA"/>
     <parameter name="departure-city" value="Bogota"/>
-    <parameter name="arrival-date" value="05/06/2017"/>
-    <parameter name="departure-date" value="09/06/2017"/>
+    <parameter name="arrival-date" value="20/06/2017"/>
+    <parameter name="departure-date" value="23/06/2017"/>
+    <parameter name="first-passengers-middlename" value="Test"/>
     <parameter name="adults-number" value="3"/>
-    <parameter name="arrival-hotel" value="Miss Mary"/>
+    <parameter name="arrival-hotel" value="Cartagena"/>
+    <parameter name="first-passengers-city" value="Bogota"/>
+    <parameter name="first-passengers-phone" value="9450125"/>
     <classes>
       <class name="com.decameron.BookSiteHotel">
         <methods>

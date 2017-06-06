@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.decameron.BookSiteHotel" hash-for-method="bookAHotel(Bogota, Miss Mary, 05/06/2017, 09/06/2017, 3, Automation, Test, Lastname)">bookAHotel(Bogota, Miss Mary, 05/06/2017, 09/06/2017, 3, Automation, Test, Lastname)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.decameron.BookSiteHotel" hash-for-method="bookAHotel(Bogota, Cartagena, 20/06/2017, 23/06/2017, 3, Automation, Test, Lastname, COLOMBIA, Bogota, 9450125,...)">bookAHotel(Bogota, Cartagena, 20/06/2017, 23/06/2017, 3, Automation, Test, Lastname, COLOMBIA, Bogota, 9450125,...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -125,10 +125,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="bookAHotel(Bogota, Miss Mary, 05/06/2017, 09/06/2017, 3, Automation, Test, Lastname)">
-                  </a> <!-- bookAHotel(Bogota, Miss Mary, 05/06/2017, 09/06/2017, 3, Automation, Test, Lastname) -->
+                  <a name="bookAHotel(Bogota, Cartagena, 20/06/2017, 23/06/2017, 3, Automation, Test, Lastname, COLOMBIA, Bogota, 9450125,...)">
+                  </a> <!-- bookAHotel(Bogota, Cartagena, 20/06/2017, 23/06/2017, 3, Automation, Test, Lastname, COLOMBIA, Bogota, 9450125,...) -->
                   <span class="method-name">bookAHotel</span>
-                  <span class="parameters">(Bogota, Miss Mary, 05/06/2017, 09/06/2017, 3, Automation, Test, Lastname)</span>
+                  <span class="parameters">(Bogota, Cartagena, 20/06/2017, 23/06/2017, 3, Automation, Test, Lastname, COLOMBIA, Bogota, 9450125, Cédula, 1054200336, 16/03/1988, Masculino, testPrueba@mail.com)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -145,13 +145,21 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test name=&quot;TestSiteColombia&quot;&gt;
     &lt;parameter name=&quot;first-passengers-name&quot; value=&quot;Automation&quot;/&gt;
+    &lt;parameter name=&quot;first-passengers-id-type&quot; value=&quot;Cédula&quot;/&gt;
+    &lt;parameter name=&quot;arrival-date&quot; value=&quot;20/06/2017&quot;/&gt;
+    &lt;parameter name=&quot;first-passengers-email&quot; value=&quot;testPrueba@mail.com&quot;/&gt;
+    &lt;parameter name=&quot;first-passengers-genre&quot; value=&quot;Masculino&quot;/&gt;
+    &lt;parameter name=&quot;arrival-hotel&quot; value=&quot;Cartagena&quot;/&gt;
     &lt;parameter name=&quot;first-passengers-lastname&quot; value=&quot;Lastname&quot;/&gt;
+    &lt;parameter name=&quot;first-passengers-id&quot; value=&quot;1054200336&quot;/&gt;
+    &lt;parameter name=&quot;first-passengers-country&quot; value=&quot;COLOMBIA&quot;/&gt;
     &lt;parameter name=&quot;departure-city&quot; value=&quot;Bogota&quot;/&gt;
-    &lt;parameter name=&quot;arrival-date&quot; value=&quot;05/06/2017&quot;/&gt;
-    &lt;parameter name=&quot;departure-date&quot; value=&quot;09/06/2017&quot;/&gt;
+    &lt;parameter name=&quot;departure-date&quot; value=&quot;23/06/2017&quot;/&gt;
     &lt;parameter name=&quot;first-passengers-middlename&quot; value=&quot;Test&quot;/&gt;
     &lt;parameter name=&quot;adults-number&quot; value=&quot;3&quot;/&gt;
-    &lt;parameter name=&quot;arrival-hotel&quot; value=&quot;Miss Mary&quot;/&gt;
+    &lt;parameter name=&quot;first-passengers-birth-date&quot; value=&quot;16/03/1988&quot;/&gt;
+    &lt;parameter name=&quot;first-passengers-city&quot; value=&quot;Bogota&quot;/&gt;
+    &lt;parameter name=&quot;first-passengers-phone&quot; value=&quot;9450125&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.decameron.BookSiteHotel&quot;/&gt;
     &lt;/classes&gt;
@@ -197,12 +205,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'bookAHotel')
 data.setCell(0, 2, 'com.decameron.BookSiteHotel')
-data.setCell(0, 3, 58518);
+data.setCell(0, 3, 39341);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -234,12 +242,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">bookAHotel(Bogota, Miss Mary, 05/06/2017, 09/06/2017, 3, Automation, Test, Lastname)</span>
-                <span class="method-start">7942 ms</span>
+                <span class="method-name">bookAHotel(Bogota, Cartagena, 20/06/2017, 23/06/2017, 3, Automation, Test, Lastname, COLOMBIA, Bogota, 9450125,...)</span>
+                <span class="method-start">7235 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">66462 ms</span>
+                <span class="method-start">46578 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

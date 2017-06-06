@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="67423" started-at="2017-05-30T19:52:28Z" finished-at="2017-05-30T19:53:35Z">
+  <suite name="Suite" duration-ms="49439" started-at="2017-06-06T14:07:29Z" finished-at="2017-06-06T14:08:18Z">
     <groups>
     </groups>
-    <test name="TestSiteColombia" duration-ms="67423" started-at="2017-05-30T19:52:28Z" finished-at="2017-05-30T19:53:35Z">
+    <test name="TestSiteColombia" duration-ms="49439" started-at="2017-06-06T14:07:29Z" finished-at="2017-06-06T14:08:18Z">
       <class name="com.decameron.BookSiteHotel">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="beforeTest" is-config="true" duration-ms="7926" started-at="2017-05-30T14:52:28Z" finished-at="2017-05-30T14:52:36Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="beforeTest" is-config="true" duration-ms="7222" started-at="2017-06-06T09:07:29Z" finished-at="2017-06-06T09:07:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="bookAHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="bookAHotel" duration-ms="58518" started-at="2017-05-30T14:52:36Z" finished-at="2017-05-30T14:53:34Z">
+        <test-method status="PASS" signature="bookAHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="bookAHotel" duration-ms="39341" started-at="2017-06-06T09:07:36Z" finished-at="2017-06-06T09:08:15Z">
           <params>
             <param index="0">
               <value>
@@ -20,17 +20,17 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Miss Mary]]>
+                <![CDATA[Cartagena]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[05/06/2017]]>
+                <![CDATA[20/06/2017]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[09/06/2017]]>
+                <![CDATA[23/06/2017]]>
               </value>
             </param>
             <param index="4">
@@ -53,11 +53,51 @@
                 <![CDATA[Lastname]]>
               </value>
             </param>
+            <param index="8">
+              <value>
+                <![CDATA[COLOMBIA]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Bogota]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[9450125]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Cédula]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[1054200336]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[16/03/1988]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Masculino]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[testPrueba@mail.com]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookAHotel -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="afterTest" is-config="true" duration-ms="957" started-at="2017-05-30T14:53:34Z" finished-at="2017-05-30T14:53:35Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.decameron.BookSiteHotel@59f99ea]" name="afterTest" is-config="true" duration-ms="2858" started-at="2017-06-06T09:08:15Z" finished-at="2017-06-06T09:08:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

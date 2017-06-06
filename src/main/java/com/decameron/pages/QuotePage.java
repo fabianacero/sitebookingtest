@@ -2,6 +2,7 @@ package com.decameron.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +17,9 @@ public class QuotePage extends WebPage{
 	@FindBy(how = How.ID, using = "vlrLiquidacionM")
 	WebElement quoteValueDisplay;
 	
+	@FindBy(how = How.ID, using = "btnGoToChangeDates")
+	List<WebElement> buttonChangeQuoteDates;
+	
 	@FindBy(how = How.ID, using = "blockrandom")
 	WebElement frameQuoteResults;
 	
@@ -27,6 +31,10 @@ public class QuotePage extends WebPage{
 	
 	public QuotePage(WebDriver driver) {
 		super(driver);
+	}
+	
+	public Boolean validateNoQuote(){
+		return buttonChangeQuoteDates.size() > 0;
 	}
 	
 	public Boolean validateHotelQuote(){

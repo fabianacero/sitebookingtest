@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.decameron.utility.DatePicker;
+
 public class SecurePage extends WebPage{
 
 	@FindBy(how = How.ID, using = "primerNombrePax1")
@@ -67,14 +69,26 @@ public class SecurePage extends WebPage{
 	@FindBy(how = How.ID, using = "ENVIAR")
 	WebElement submitButton;
 	
-	
 	public SecurePage(WebDriver driver) {
 		super(driver);
 	}
 
-	public void fillSecureForm(String firstPassengersName, String firstPassengersMiddleName, String firstPassengersLastName){
+	public void fillSecureForm(String firstPassengersName, String firstPassengersMiddleName, String firstPassengersLastName,
+			String firstPassengersCountry, String firstPassengersCity, String firstPassengersPhone,
+			String firstPassengersIDType, String firstPassengersID, String firstPassengersBirthDate, String firstPassengersGenre,
+			String firstPassengersEmail){
+		
 		setInputValue(firstPassengerNameInput, firstPassengersName);
 		setInputValue(firstPassengerMiddleNameInput, firstPassengersMiddleName);
 		setInputValue(firstPassengerLastNameInput, firstPassengersLastName);
+		setSelectValue(firstPassengerCountrySelect, firstPassengersCountry);
+		setInputValue(firstPassengerCityInput, firstPassengersCity);
+		setInputValue(firstPassengerPhoneInput, firstPassengersPhone);
+		setSelectValue(firstPassengerIDTypeSelect, firstPassengersIDType);
+		setInputValue(firstPassengerIDNumberInput, firstPassengersID);
+		DatePicker mydate = new DatePicker(firstPassengerBirthDateDatePicker, firstPassengersBirthDate);
+		System.out.println(mydate.getMonthName());
+		setSelectValue(firstPassengerGenre, firstPassengersGenre);
+		setInputValue(firstPassengerEmail, firstPassengersEmail);
 	}
 }

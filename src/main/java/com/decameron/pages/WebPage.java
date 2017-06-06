@@ -61,10 +61,19 @@ public class WebPage {
 	 * @param selector
 	 * @param adultsNumber
 	 */
-	public void setSelectValue(WebElement selector, int adultsNumber){
-		new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(selector));
-		//selector.click();
-		(new Select(selector)).deselectByValue("3");
+	public void setSelectValue(WebElement selector, int value){
+		new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.visibilityOf(selector));
+		(new Select(selector)).selectByVisibleText("" + value);
+	}
+	
+	/**
+	 * Selects a normal selector with the indicated value
+	 * @param selector
+	 * @param adultsNumber
+	 */
+	public void setSelectValue(WebElement selector, String value){
+		new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.visibilityOf(selector));
+		(new Select(selector)).selectByVisibleText(value);
 	}
 	
     /**

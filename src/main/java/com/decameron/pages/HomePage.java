@@ -25,7 +25,7 @@ public class HomePage extends WebPage{
 	@FindBy(how = How.CSS, using = "button[data-id='hotelCompHotel1']")
 	WebElement selectorHotel;
 	
-	@FindBy(css="div.bootstrap-select.open > div.dropdown-menu.open span.text")
+	@FindBy(css="div.bootstrap-select.open > div.dropdown-menu.open li > a > span.text")
 	List<WebElement> selectorHotelList;
 	
 	@FindBy(how = How.ID, using = "entradaCompHotel1")

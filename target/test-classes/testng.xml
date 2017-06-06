@@ -5,14 +5,22 @@
   <test name="TestSiteColombia">
   	
   	<parameter name="departure-city" value="Bogota" />
-  	<parameter name="arrival-hotel" value="Miss Mary" />
-  	<parameter name="arrival-date" value="05/06/2017" />
-  	<parameter name="departure-date" value="09/06/2017" />
+  	<parameter name="arrival-hotel" value="Cartagena" />
+  	<parameter name="arrival-date" value="20/06/2017" />
+  	<parameter name="departure-date" value="23/06/2017" />
   	<parameter name="adults-number" value="3" />
   	
   	<parameter name="first-passengers-name" value="Automation" />
   	<parameter name="first-passengers-middlename" value="Test" />
   	<parameter name="first-passengers-lastname" value="Lastname" />
+  	<parameter name="first-passengers-country" value="COLOMBIA" />
+  	<parameter name="first-passengers-city" value="Bogota" />
+  	<parameter name="first-passengers-phone" value="9450125" />
+  	<parameter name="first-passengers-id-type" value="Cédula" />
+  	<parameter name="first-passengers-id" value="1054200336" />
+  	<parameter name="first-passengers-birth-date" value="16/03/1988" />
+  	<parameter name="first-passengers-genre" value="Masculino" />
+  	<parameter name="first-passengers-email" value="testPrueba@mail.com" />
   	    
     <classes>
       <class name="com.decameron.BookSiteHotel"/>
