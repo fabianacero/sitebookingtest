@@ -17,7 +17,7 @@ import org.testng.annotations.AfterTest;
 public class BookSiteHotel {
 	
 	private WebDriver driver;
-	private static final String URL = "https://www.decameron.com/es/co-inicio";
+	private static final String URL = "https://pruebaswww.decameron.com/es/co-inicio";
 	private static final String MSG_ADULT_NUMBER_ERR = "This is an incorrect adult number";
 	private static final String MSG_NO_QUOTE = "Validate quote dates";
 	private static final String MSG_NO_HOTEL = "There isn't any hotel quote";

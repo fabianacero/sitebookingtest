@@ -3,14 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="TestSiteColombia(failed)">
     <parameter name="first-passengers-name" value="Automation"/>
+    <parameter name="first-passengers-id-type" value="Cédula"/>
+    <parameter name="arrival-date" value="20/09/2017"/>
+    <parameter name="first-passengers-email" value="testPrueba@mail.com"/>
+    <parameter name="first-passengers-genre" value="Masculino"/>
+    <parameter name="arrival-hotel" value="Cartagena"/>
     <parameter name="first-passengers-lastname" value="Lastname"/>
+    <parameter name="first-passengers-id" value="1054200336"/>
     <parameter name="first-passengers-country" value="COLOMBIA"/>
     <parameter name="departure-city" value="Bogota"/>
-    <parameter name="arrival-date" value="20/06/2017"/>
-    <parameter name="departure-date" value="23/06/2017"/>
+    <parameter name="departure-date" value="23/09/2017"/>
     <parameter name="first-passengers-middlename" value="Test"/>
-    <parameter name="adults-number" value="3"/>
-    <parameter name="arrival-hotel" value="Cartagena"/>
+    <parameter name="adults-number" value="2"/>
+    <parameter name="first-passengers-birth-date" value="16/03/1988"/>
     <parameter name="first-passengers-city" value="Bogota"/>
     <parameter name="first-passengers-phone" value="9450125"/>
     <classes>
